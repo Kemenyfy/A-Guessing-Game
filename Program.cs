@@ -25,37 +25,33 @@ namespace GuessingGame
             else
             {
                 Console.WriteLine("Ok, let's Play...");
-            }
-
-            do
-            {
-                Console.WriteLine($"Is your number {NumberToGuess}? (Yes - H for Higher - L for Lower)");
-                var userAnswer = Console.ReadLine();
-                if (userAnswer.Equals($"{Yes}"))
+                do
                 {
-                    Console.WriteLine($"It took me {Attempts} try!");
-                }
-                if (Attempts >= 7)
-                {
-                    Console.WriteLine("I've tried enough, I give up!");
-                }
-                else if (userAnswer.Equals($"{Higher}"))
-                {
-                    min = NumberToGuess + 1;
-                    NumberToGuess = ((max - min) / 2) + min;
-                    Attempts++;
-                }
-                else
-                {
-                    if (userAnswer.Equals($"{Lower}"))
+                    Console.WriteLine($"Is your number {NumberToGuess}? (Yes - H for Higher - L for Lower)");
+                    var userAnswer = Console.ReadLine();
+                    if (userAnswer.Equals($"{Yes}"))
                     {
-                        max = NumberToGuess - 1;
-                        NumberToGuess = ((max - min) / 2 + min);
+                        Console.WriteLine($"It took me {Attempts} tries!");
+                        break;
+                    }
+                    else if (userAnswer.Equals($"{Higher}"))
+                    {
+                        min = NumberToGuess + 1;
+                        NumberToGuess = ((max - min) / 2) + min;
                         Attempts++;
                     }
+                    else
+                    {
+                        if (userAnswer.Equals($"{Lower}"))
+                        {
+                            max = NumberToGuess - 1;
+                            NumberToGuess = ((max - min) / 2 + min);
+                            Attempts++;
+                        }
+                    }
                 }
+                while (Attempts <= 6);
             }
-            while (Attempts <= 6);
         }
     }
 }
