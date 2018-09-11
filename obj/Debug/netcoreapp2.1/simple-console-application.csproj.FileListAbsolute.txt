@@ -1,0 +1,11 @@
+/Users/Kemenyfy/sdg/cool-projects/simple-console-application/obj/Debug/netcoreapp2.1/simple-console-application.csprojAssemblyReference.cache
+/Users/Kemenyfy/sdg/cool-projects/simple-console-application/obj/Debug/netcoreapp2.1/simple-console-application.csproj.CoreCompileInputs.cache
+/Users/Kemenyfy/sdg/cool-projects/simple-console-application/obj/Debug/netcoreapp2.1/simple-console-application.AssemblyInfoInputs.cache
+/Users/Kemenyfy/sdg/cool-projects/simple-console-application/obj/Debug/netcoreapp2.1/simple-console-application.AssemblyInfo.cs
+/Users/Kemenyfy/sdg/cool-projects/simple-console-application/bin/Debug/netcoreapp2.1/simple-console-application.deps.json
+/Users/Kemenyfy/sdg/cool-projects/simple-console-application/bin/Debug/netcoreapp2.1/simple-console-application.runtimeconfig.json
+/Users/Kemenyfy/sdg/cool-projects/simple-console-application/bin/Debug/netcoreapp2.1/simple-console-application.runtimeconfig.dev.json
+/Users/Kemenyfy/sdg/cool-projects/simple-console-application/bin/Debug/netcoreapp2.1/simple-console-application.dll
+/Users/Kemenyfy/sdg/cool-projects/simple-console-application/bin/Debug/netcoreapp2.1/simple-console-application.pdb
+/Users/Kemenyfy/sdg/cool-projects/simple-console-application/obj/Debug/netcoreapp2.1/simple-console-application.dll
+/Users/Kemenyfy/sdg/cool-projects/simple-console-application/obj/Debug/netcoreapp2.1/simple-console-application.pdb
