@@ -10,29 +10,52 @@ namespace GuessingGame
             var max = 100;
             var Yes = "Yes";
             var Attempts = 0;
+            var Higher = "H";
+            var Lower = "L";
+            var NumberToGuess = 50;
 
             Console.WriteLine($"Think of a number between {min} and {max}.");
-            Console.WriteLine("I will be able to guess in 10 tries or less");
+            Console.WriteLine("I will be able to guess in 6 tries or less");
             Console.WriteLine("Ok? (Yes or No)");
             var answer = Console.ReadLine();
             if (answer == "No")
             {
                 Console.WriteLine("I really wanted to play with you... Good bye.");
-            } 
+            }
             else
             {
                 Console.WriteLine("Ok, let's Play...");
             }
-            Console.WriteLine("Is your number 50? (Yes - H for Higher - L for Lower)");
-            var userAnswer = Console.ReadLine();
-            if (userAnswer.Equals($"{Yes}"));
+
+            do
             {
-                Console.WriteLine("It took me 1 try!");
+                Console.WriteLine($"Is your number {NumberToGuess}? (Yes - H for Higher - L for Lower)");
+                var userAnswer = Console.ReadLine();
+                if (userAnswer.Equals($"{Yes}"))
+                {
+                    Console.WriteLine($"It took me {Attempts} try!");
+                }
+                if (Attempts >= 7)
+                {
+                    Console.WriteLine("I've tried enough, I give up!");
+                }
+                else if (userAnswer.Equals($"{Higher}"))
+                {
+                    min = NumberToGuess + 1;
+                    NumberToGuess = ((max - min) / 2) + min;
+                    Attempts++;
+                }
+                else
+                {
+                    if (userAnswer.Equals($"{Lower}"))
+                    {
+                        max = NumberToGuess - 1;
+                        NumberToGuess = ((max - min) / 2 + min);
+                        Attempts++;
+                    }
+                }
             }
-            if (Attempts >= 10)
-            {
-                Console.WriteLine("I've tried enough, I give up!");
-            }
+            while (Attempts <= 6);
         }
     }
 }
